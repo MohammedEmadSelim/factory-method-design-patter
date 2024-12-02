@@ -18,10 +18,11 @@ class PrimaryButton implements Button {
     print('render primary Button');
   }
 }
+
 class CustomButton implements Button {
   @override
   void render() {
-    print('render primary Button');
+    print('render default Button');
   }
 }
 
@@ -38,4 +39,11 @@ class FactoryMethod {
   }
 }
 
-void main(List<String> arguments) {}
+void main(List<String> arguments) {
+
+  //using factory method
+
+  final button  =FactoryMethod().createButton('secondakry');
+
+      button.render();
+}
